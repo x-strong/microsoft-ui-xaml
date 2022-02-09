@@ -716,6 +716,7 @@ winrt::IAsyncAction WebView2::CreateCoreEnvironment() noexcept
     {
         // NOTE: To enable Anaheim logging, add:  --enable-logging=stderr --v=1
         m_options = winrt::CoreWebView2EnvironmentOptions();
+        //m_options.AdditionalBrowserArguments(L"--enable-features=msEmbeddedBrowserVisualHosting,OverlayScrollbar,OverlayScrollbarWinStyle,OverlayScrollbarWinStyleAnimation");
         m_options.AdditionalBrowserArguments(L"--enable-features=msEmbeddedBrowserVisualHosting");
 
         auto applicationLanguagesList = winrt::ApplicationLanguages::Languages();
